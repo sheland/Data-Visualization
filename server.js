@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 const express = require('express');
-
+//server will listen to port number given by heroku or 8080
 const DEFAULT_PORT = process.env.PORT || 8080;
 const port = parseInt(process.argv[2]) || DEFAULT_PORT;
 
