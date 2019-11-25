@@ -57,12 +57,7 @@ const appContainer = document.getElementById(ROOT_ELEMENT_ID);
 // Create UI controls and add to the DOM.
 controls.create(appContainer);
 
-// Add visualization container to the DOM. Visualization should be created inside this container.
-const vizContainer = util.createElementWithAttributes('main', {
-  id: 'viz',
-  class: 'viz',
-});
-appContainer.appendChild(vizContainer);
+
 
 /*
   Filter the main json based on the sex and the year that we want. 
@@ -91,7 +86,7 @@ var margin = {
 };
 
 // set the dimensions the chart
-var width = 700 - margin.left - margin.right;
+var width = 800 - margin.left - margin.right;
 var height = 400 - margin.top - margin.bottom;
 
 var xScale = d3.scaleBand().range([0, width]);
@@ -186,10 +181,6 @@ store.subscribe(function(update) {
     let initData = filterDataSet(controls.initialState["sex"], controls.initialState["year"])
     
     refreshBarChart(initData);
-
-    // TODO : Visualize the data!
-
-
 
   } catch (err) {
     vizContainer.textContent = 'Error loading data.';
