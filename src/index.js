@@ -109,7 +109,7 @@ function refreshBarChart(data) {
 
   // start creating the bar chart 
   let svg = d3.select("#barchart")
-    .append("svg")
+    .append("svg") 
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
