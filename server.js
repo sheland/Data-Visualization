@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-const DEFAULT_PORT = 8080;
+const DEFAULT_PORT = process.env.PORT || 8080;
 const port = parseInt(process.argv[2]) || DEFAULT_PORT;
 
 const app = express();
